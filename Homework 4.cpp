@@ -1,96 +1,64 @@
 #include <iostream>
 using namespace std;
-int main ()
+int main()
 {
-      char chr1, chr2, chr3, a = 'A', b = 'B', c = 'C';
-    int chA, chB, chC , result;
+	char mn;
 
+	cout << "Select Menu\n";
+	cout << "*********************\n";
+	cout << "\n";
+	cout << "1.Align Left \n";
+	cout << "2.Align Right\n";
+	cout << "3.Center\n";
+	cout << "4.Exit\n";
+	cout << "\n";
+	cout << "*********************\n";
+	cout << "\n";
 
-    cout << "Enter character 1 (A,B,C) : ";
-    cin >> chr1;
-    cout << "Enter character 2 (A,B,C) : ";
-    cin >> chr2;
-    cout << "Enter character 3 (A,B,C) : ";
-    cin >> chr3;
-    cout << endl;
-
-
-    switch (chr1)
-    {
-        case 'A':
-            chr1 = a;
-            chA = 10;
-            cout << "A = " << chA <<", ";
-
-            break;
-        case 'B':
-            chr1 = b;
-            chA = 20;
-            cout << "B = " << chA <<", ";
-            break;
-        case 'C':
-            chr1 = c;
-            chA = 30;
-            cout << "C = " << chA <<", ";
-            break;
-        default:
-            cout << "\"" << chr1 << "\" is not (A,B,C)!" << endl;
-            return 1;
-    }
-
-    switch (chr2)
-    {
-        case 'A':
-            chr2 = a;
-            chB = 10;
-            cout << "A = " << chB <<", ";
-            break;
-        case 'B':
-            chr2 = b;
-            chB = 20;
-            cout << "B = " << chB <<", ";
-            break;
-        case 'C':
-            chr2 = c;
-            chB = 30;
-            cout << "C = " << chB <<", ";
-            break;
-        default:
-            cout << "\"" << chr2 << "\" is not (A,B,C)!" << endl;
-            return 1;
-    }
-
-    switch (chr3)
-    {
-        case 'A':
-            chr3 = a;
-            chC = 10;
-            cout << "A = " << chC;
-            break;
-        case 'B':
-            chr3 = b;
-            chC = 20;
-            cout << "B = " << chC;
-            break;
-        case 'C':
-            chr3 = c;
-            chC = 30;
-            cout << "C = " << chC;
-            break;
-        default:
-            cout << "\"" << chr3 << "\" is not (A,B,C)!" << endl;
-            return 1;
-    }
-    cout << endl;
-
-    result = chA + chB + chC;
-    cout << chr1 << " + " << chr2 << " + " << chr3 << " = ";
-    cout << chA << " + " << chB << " + " << chC << " = " << result << endl;
-    
-
-    cout << endl;
-    
-
-    return 0;
+	do{cout << "Select Menu No. : "; cin >> mn;
+			if (mn == '1')//
+			{
+				cout << "Input number of line : ";
+				int n, j, i;
+				cin >> n;
+				for (i = 1; i <= n; i++){
+					for(j = 1; j <= i; j++)
+						{cout << "*";}
+					cout << "\n";
+				}
+			}
+			else if (mn == '2')//
+			{
+				cout << "Input number of line : ";
+				int n, j, i, k;
+				cin >> n;
+				for (i = 1; i <= n; i++){
+					for(k = n - i; k > 0; k--)
+						{cout << " ";}
+						for(j = 1; j <= i; j++)
+							{cout << "*";}
+					cout << "\n";
+				}
+			}
+			else if (mn == '3')//
+				{
+				cout << "Input number of line : ";
+				int j, r, i, space;
+				cin >> r;
+				for (i = 1; i <= r; i++){
+					for(space = i; space < r; space ++)
+						{cout << " ";}
+						for(j = 1; j <= (2 * i - 1); j++)
+							{cout << "*";}
+					cout << "\n";
+				}
+				}
+			else if (mn == '4')//
+			{
+				exit(0);
+			}
+			else cout << "Invalid Menu! Please Choose Again\n";
+			//
+			}while(mn != 0);
+		return(0);
 }
- 
